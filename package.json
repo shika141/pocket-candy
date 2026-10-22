@@ -1,9 +1,9 @@
 {
-  "name": "today-one-candy-v10",
-  "version": "10.0.0",
+  "name": "today-one-candy-v11",
+  "version": "11.0.0",
   "private": true,
-  "description": "今日一顆糖－新增糖果分類圖片放大檢視",
+  "description": "今日一顆糖－替換首頁抽糖糖罐圖案",
   "scripts": {
-    "serve": "npx serve dist"
+    "start": "python3 -m http.server 8080"
   }
 }
