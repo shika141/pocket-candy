@@ -88,4 +88,13 @@ h1,h2,h3,h4,.brand,.zh-title{font-family:var(--font-zh-title);font-weight:400}
 <script>
 (()=>{const brand=document.querySelector('.brand');if(!brand)return;brand.innerHTML='';const icon=document.createElement('img');icon.className='brand-icon';icon.src='assets/tangtang-brand-v15.png';icon.alt='糖糖貓咪歡樂塗鴉徽章';const text=document.createElement('span');text.textContent='今日一顆糖';brand.append(icon,text)})();
 </script>
+<style>
+.desktop-peek{display:none}
+@media (min-width:1100px) and (hover:hover){
+  .desktop-peek{display:block;position:fixed;left:-64px;top:50%;width:248px;height:auto;transform:translateY(-50%);z-index:8;pointer-events:none;user-select:none;filter:drop-shadow(8px 12px 15px rgba(55,37,65,.18));animation:peek-breathe 5.2s ease-in-out infinite}
+}
+@keyframes peek-breathe{0%,100%{transform:translateY(-50%) rotate(0deg)}50%{transform:translateY(calc(-50% - 7px)) rotate(-1deg)}}
+@media (prefers-reduced-motion:reduce){.desktop-peek{animation:none}}
+</style>
+<img class="desktop-peek" src="assets/tangtang-peek-v16.png" alt="糖糖從螢幕左側探出頭">
 </body></html>
