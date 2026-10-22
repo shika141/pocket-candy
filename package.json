@@ -1,8 +1,8 @@
 {
-  "name": "today-one-candy-v08",
-  "version": "8.0.0",
+  "name": "today-one-candy-v09",
+  "version": "9.0.0",
   "private": true,
-  "description": "今日一顆糖－新增糖紙收藏詳情與放大檢視",
+  "description": "今日一顆糖－替換糖果分類九種口味圖標",
   "scripts": {
     "serve": "npx serve dist"
   }
