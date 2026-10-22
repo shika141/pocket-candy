@@ -1,8 +1,8 @@
 {
-  "name": "today-one-candy-v07",
-  "version": "7.0.0",
+  "name": "today-one-candy-v08",
+  "version": "8.0.0",
   "private": true,
-  "description": "今日一顆糖－修正糖紙冊仍顯示 Emoji",
+  "description": "今日一顆糖－新增糖紙收藏詳情與放大檢視",
   "scripts": {
     "serve": "npx serve dist"
   }
