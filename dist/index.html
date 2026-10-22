@@ -46,4 +46,10 @@ body{background-image:linear-gradient(rgba(255,251,253,.70),rgba(255,247,250,.78
 <script>
 (()=>{const candyImages={strawberry:'assets/candy/strawberry.webp',lemon:'assets/candy/lemon.webp',grape:'assets/candy/grape.webp',milk:'assets/candy/milk.webp',peach:'assets/candy/peach.webp',mint:'assets/candy/mint.webp',caramel:'assets/candy/caramel.webp',chocolate:'assets/candy/chocolate.webp',lollipop:'assets/candy/lollipop.webp'};const originalRender=render;render=function(result,animate=false){originalRender(result,animate);const candy=candies.find(item=>item.id===result.candyId);if(!candy)return;const src=candyImages[candy.id];document.querySelector('#resultIcon').innerHTML=`<img src="${src}" alt="糖糖抱著${candy.name}的Q版插畫">`;if(animate)document.querySelector('#wrapCandy').innerHTML=`<img src="${src}" alt="正在抽出${candy.name}">`};if(current)render(current,false)})();
 </script>
+<style>
+.saved-icon{width:72px;height:62px;display:grid;place-items:center;flex:0 0 auto;font-size:0}.saved-icon img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(91,54,72,.14))}@media(max-width:700px){.saved-icon{width:66px;height:56px}}
+</style>
+<script>
+(()=>{const wrapperImages={strawberry:'assets/wrappers/strawberry.webp',lemon:'assets/wrappers/lemon.webp',grape:'assets/wrappers/grape.webp',milk:'assets/wrappers/milk.webp',peach:'assets/wrappers/peach.webp',mint:'assets/wrappers/mint.webp',caramel:'assets/wrappers/caramel.webp',chocolate:'assets/wrappers/chocolate.webp',lollipop:'assets/wrappers/lollipop.webp'};showBook=function(){const b=getBook();document.querySelector('#bookBody').innerHTML=b.length?`<div class="book-grid">${b.map(r=>{const c=candies.find(x=>x.id===r.candyId),s=c.slips[r.slip],src=wrapperImages[c.id];return`<article class="saved"><div class="saved-top"><span class="saved-icon"><img src="${src}" alt="${c.name}糖紙圖案"></span><span class="saved-date">${r.date}</span></div><h3>${c.name}・${String(r.slip+1).padStart(2,'0')}</h3><p>${s[0]}</p></article>`}).join('')}</div>`:'<div class="book-empty">還沒有糖紙。<br>抽到今日的糖以後，把它收進來吧。</div>';document.querySelector('#book').showModal()}})();
+</script>
 </body></html>
