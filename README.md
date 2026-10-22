@@ -1,23 +1,48 @@
-# 《今日一顆糖》04－更換糖果插畫背景
+# 《今日一顆糖》05－替換九種糖果抽取插畫
 
 曾巟糖の非科學糖果占卜，完整靜態網站原始碼。
 
-## 04 修改內容
+## 05 修改內容
 
-- 將使用者提供的直式糖果插畫設為全站背景。
-- 加入淡白色背景遮罩，維持文字與操作按鈕的可讀性。
-- 手機版保留直式插畫構圖，避免固定背景造成 Safari 顯示問題。
-- 巧克力糖模式沿用同一張插畫，改以深色濾鏡呈現。
-- 保留原有版面、90 張糖籤、動畫、糖紙冊及手機搖一搖功能。
+- 將抽取揭曉畫面的糖果 Emoji 主圖替換為九張專屬 Q 版糖糖插畫。
+- 糖紙揭曉動畫同步顯示抽中的對應插畫。
+- 九種糖果皆有獨立圖片，不會出現錯誤配對。
+- 保留小型 Emoji 作為分類標示與糖紙冊圖示。
+- 將原始透明 PNG 最佳化為高品質透明 WebP，提升手機載入速度。
+- 保留 04 版糖果背景、全部糖籤、糖紙冊、手機搖一搖與特殊彩蛋。
+
+## 圖片對應
+
+```text
+草莓糖   → dist/assets/candy/strawberry.webp
+檸檬糖   → dist/assets/candy/lemon.webp
+葡萄糖   → dist/assets/candy/grape.webp
+牛奶糖   → dist/assets/candy/milk.webp
+水蜜桃糖 → dist/assets/candy/peach.webp
+薄荷糖   → dist/assets/candy/mint.webp
+焦糖     → dist/assets/candy/caramel.webp
+巧克力糖 → dist/assets/candy/chocolate.webp
+棒棒糖   → dist/assets/candy/lollipop.webp
+```
 
 ## 專案結構
 
 ```text
-04-更換糖果插畫背景-今日一顆糖完整原始碼/
+05-替換九種糖果抽取插畫-今日一顆糖完整原始碼/
 ├── dist/
 │   ├── index.html
 │   └── assets/
-│       └── candy-background.jpeg
+│       ├── candy-background.jpeg
+│       └── candy/
+│           ├── strawberry.webp
+│           ├── lemon.webp
+│           ├── grape.webp
+│           ├── milk.webp
+│           ├── peach.webp
+│           ├── mint.webp
+│           ├── caramel.webp
+│           ├── chocolate.webp
+│           └── lollipop.webp
 ├── package.json
 ├── CHANGELOG.md
 ├── .gitignore

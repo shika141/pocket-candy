@@ -1,8 +1,8 @@
 {
-  "name": "today-one-candy-v04-background-update",
-  "version": "4.0.0",
+  "name": "today-one-candy-v05-candy-illustrations",
+  "version": "5.0.0",
   "private": true,
-  "description": "今日一顆糖 04－更換糖果插畫背景",
+  "description": "今日一顆糖 05－替換九種糖果抽取插畫",
   "scripts": {
     "preview": "npx --yes serve dist"
   }
