@@ -103,4 +103,11 @@ h1,h2,h3,h4,.brand,.zh-title{font-family:var(--font-zh-title);font-weight:400}
 <script>
 (()=>{const tangtang=document.querySelector('.desktop-peek');if(!tangtang)return;const toggle=()=>{const open=tangtang.classList.toggle('is-open');tangtang.setAttribute('aria-expanded',String(open));tangtang.alt=open?'點一下，讓糖糖縮回螢幕左側':'點一下，讓糖糖從螢幕左側完整探出頭'};tangtang.addEventListener('click',toggle);tangtang.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();toggle()}})})();
 </script>
+<style>
+.accuracy-icon{display:inline-block;width:34px;height:34px;object-fit:contain;vertical-align:middle;margin-left:3px;filter:drop-shadow(0 3px 4px rgba(91,54,72,.12))}
+@media(max-width:700px){.accuracy-icon{width:30px;height:30px}}
+</style>
+<script>
+(()=>{const line=document.querySelector('.intro .disclaimer');if(!line)return;line.textContent='準確率不明。本人堅信有效。 ';const icon=document.createElement('img');icon.className='accuracy-icon';icon.src='assets/tangtang-accuracy-v18.png';icon.alt='糖糖從糖果罐裡開心舉起糖果';line.append(icon)})();
+</script>
 </body></html>
