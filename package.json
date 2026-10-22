@@ -1,8 +1,8 @@
 {
-  "name": "today-one-candy-v06",
-  "version": "6.0.0",
+  "name": "today-one-candy-v07",
+  "version": "7.0.0",
   "private": true,
-  "description": "今日一顆糖－替換糖紙冊九種口味圖標",
+  "description": "今日一顆糖－修正糖紙冊仍顯示 Emoji",
   "scripts": {
     "serve": "npx serve dist"
   }
