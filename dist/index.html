@@ -82,4 +82,10 @@ h1,h2,h3,h4,.brand,.zh-title{font-family:var(--font-zh-title);font-weight:400}
 .kicker,.disclaimer,.tiny,.tang-line,.cert,.bonus,.milk-gift,.detail-tang,.detail-gift{font-family:var(--font-tangtang);font-weight:400}
 .intro h1{letter-spacing:.01em}.label{font-family:var(--font-body)}
 </style>
+<style>
+.brand{display:inline-flex;align-items:center;gap:8px}.brand-icon{display:block;width:34px;height:34px;object-fit:contain;flex:0 0 auto;filter:drop-shadow(0 3px 4px rgba(91,54,72,.12))}@media(max-width:700px){.brand{gap:6px}.brand-icon{width:30px;height:30px}}
+</style>
+<script>
+(()=>{const brand=document.querySelector('.brand');if(!brand)return;brand.innerHTML='';const icon=document.createElement('img');icon.className='brand-icon';icon.src='assets/tangtang-brand-v15.png';icon.alt='糖糖貓咪歡樂塗鴉徽章';const text=document.createElement('span');text.textContent='今日一顆糖';brand.append(icon,text)})();
+</script>
 </body></html>

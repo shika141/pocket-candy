@@ -1,17 +1,14 @@
-# 《今日一顆糖》v14
+# 《今日一顆糖》v15
 
-此版本專門修正 GitHub 連接 Cloudflare Pages 時，線上網站仍讀取舊 `dist` 資料夾，造成新糖罐圖片與字體沒有生效的問題。
+此版本將左上角「🍬 今日一顆糖」原本的糖果 Emoji，替換成使用者提供的「糖糖貓咪歡樂塗鴉徽章」。
 
-## 已修正
+## 本次修改
 
-- 根目錄 `index.html` 與 `dist/index.html` 已同步為同一份最新版。
-- 根目錄 `assets` 與 `dist/assets` 均包含完整素材。
-- 圖二糖罐位於兩邊的 `assets/candy-jar-v13.png`。
-- Fredoka、芫荽、jf open 粉圓與小賴字體設定已同步進兩份 `index.html`。
-- 新增 Cloudflare Pages `_headers`，避免 `index.html` 長期沿用舊快取。
+- 左上角品牌圖標改為 `assets/tangtang-brand-v15.png`
+- 保留「今日一顆糖」文字與導覽列配置
+- 桌面版與手機版分別調整圖標尺寸
+- 根目錄與 `dist` 部署內容保持同步，適用 GitHub＋Cloudflare Pages
 
-## 上傳到 GitHub
+## 上傳方式
 
-請解壓縮 ZIP，將資料夾裡的所有檔案與資料夾上傳到 GitHub 專案最外層，遇到同名檔案時選擇覆蓋。
-
-Cloudflare Pages 的「建置輸出目錄」無論目前填寫 `dist` 或留空，都會讀到相同的最新版。
+解壓縮後，將資料夾內所有檔案與資料夾上傳到 GitHub 專案最外層，遇到同名項目時全部覆蓋。

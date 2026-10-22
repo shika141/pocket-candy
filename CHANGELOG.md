@@ -1,8 +1,7 @@
 # 修改紀錄
 
-## v14.0.0 — 修正 GitHub 部署圖片與字體未生效
+## v15.0.0 — 替換左上角品牌圖標
 
-- 同步根目錄與 `dist` 部署內容。
-- 補齊 `dist/assets/candy-jar-v13.png`。
-- 將第 12 版字體系統同步至 `dist/index.html`。
-- 新增 Cloudflare Pages HTML 防快取設定。
+- 移除左上角糖果 Emoji。
+- 改用糖糖貓咪歡樂塗鴉徽章 PNG。
+- 同步根目錄與 `dist` 內的圖片和網頁檔案。
