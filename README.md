@@ -1,20 +1,17 @@
-# 《今日一顆糖》v13
+# 《今日一顆糖》v14
 
-本版本修正首頁「點糖罐抽取」按鈕的糖罐圖案，直接使用使用者重新提供的圖二原始 PNG。
+此版本專門修正 GitHub 連接 Cloudflare Pages 時，線上網站仍讀取舊 `dist` 資料夾，造成新糖罐圖片與字體沒有生效的問題。
 
-## 本次修正
+## 已修正
 
-- 首頁抽糖圖案改為 `assets/candy-jar-v13.png`
-- 新素材檔案與使用者提供的圖二完全一致
-- 使用全新檔名，避免瀏覽器沿用舊素材快取
-- 保留點擊抽糖、手機搖一搖、晃動動畫與所有既有功能
+- 根目錄 `index.html` 與 `dist/index.html` 已同步為同一份最新版。
+- 根目錄 `assets` 與 `dist/assets` 均包含完整素材。
+- 圖二糖罐位於兩邊的 `assets/candy-jar-v13.png`。
+- Fredoka、芫荽、jf open 粉圓與小賴字體設定已同步進兩份 `index.html`。
+- 新增 Cloudflare Pages `_headers`，避免 `index.html` 長期沿用舊快取。
 
-## 使用方式
+## 上傳到 GitHub
 
-這是純靜態網頁專案，可部署整個資料夾，或執行：
+請解壓縮 ZIP，將資料夾裡的所有檔案與資料夾上傳到 GitHub 專案最外層，遇到同名檔案時選擇覆蓋。
 
-```bash
-python3 -m http.server 8080
-```
-
-再開啟 `http://localhost:8080`。
+Cloudflare Pages 的「建置輸出目錄」無論目前填寫 `dist` 或留空，都會讀到相同的最新版。

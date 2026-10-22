@@ -1,8 +1,8 @@
 {
-  "name": "today-one-candy-v13",
-  "version": "13.0.0",
+  "name": "today-one-candy-v14",
+  "version": "14.0.0",
   "private": true,
-  "description": "今日一顆糖－修正首頁抽糖糖罐為圖二",
+  "description": "今日一顆糖－修正 GitHub 與 Cloudflare Pages 部署內容不同步",
   "scripts": {
     "start": "python3 -m http.server 8080"
   }
