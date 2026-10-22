@@ -1,6 +1,6 @@
 {
-  "name": "today-one-candy-v16",
-  "version": "16.0.0",
+  "name": "today-one-candy-v17",
+  "version": "17.0.0",
   "private": true,
   "scripts": {
     "start": "npx serve ."
