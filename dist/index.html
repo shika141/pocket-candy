@@ -139,4 +139,10 @@ h1,h2,h3,h4,.brand,.zh-title{font-family:var(--font-zh-title);font-weight:400}
 <script>
 (()=>{const jar=document.querySelector('#draw');if(!jar)return;jar.addEventListener('click',event=>{event.stopImmediatePropagation();draw()},true)})();
 </script>
+<style>
+.draw-scene.is-searching .draw-tangtang{animation:none}.draw-scene .draw-picked-candy,.draw-scene .draw-spark{display:none!important}
+</style>
+<script>
+(()=>{const scene=document.querySelector('.draw-scene'),jar=document.querySelector('#draw'),image=scene&&scene.querySelector('.draw-tangtang'),title=scene&&scene.querySelector('.draw-scene-title');if(!scene||!jar||!image||!title)return;let gifDrawing=false;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches,wait=ms=>new Promise(resolve=>setTimeout(resolve,reduced?Math.min(ms,140):ms));draw=async function(){if(gifDrawing)return;const daily=safeGet(key,null);if(daily&&daily.date===today()){render(daily,true);return}gifDrawing=true;jar.disabled=true;const result=createResult(),hour=new Date().getHours(),candy=candies.find(item=>item.id===result.candyId);if(hour>=18&&['lemon','mint','caramel'].includes(result.candyId)&&Math.random()<.08)result.milk=true;saveLocal(key,result);scene.classList.remove('hidden','is-picked');scene.classList.add('is-playing','is-searching');title.textContent='糖糖正在替你挑一顆……';image.src='assets/tangtang-draw-v25.gif?play='+Date.now();image.alt='糖糖伸手進糖果罐抽出一顆糖';await wait(2450);title.textContent=`抽到了——${candy.name}！`;await wait(800);scene.classList.remove('is-playing','is-searching');scene.classList.add('hidden');render(result,true);await wait(candy.special?1950:candy.id==='chocolate'?1700:1400);gifDrawing=false;jar.disabled=false}})();
+</script>
 </body></html>
